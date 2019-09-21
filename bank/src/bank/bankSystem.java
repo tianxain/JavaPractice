@@ -7,29 +7,29 @@ public class bankSystem {
 	public static void main(String[] args) {
 		while (true) {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("»¶Ó­½øÈëÍøÉÏÒøĞĞÏµÍ³£¡");
-			System.out.println("ÇëÊäÈëÒøĞĞ¿¨ºÅ(Ê×´ÎÊ¹ÓÃÇë°´0×¢²á):");
+			System.out.println("æ¬¢è¿è¿›å…¥ç½‘ä¸Šé“¶è¡Œç³»ç»Ÿï¼");
+			System.out.println("è¯·è¾“å…¥é“¶è¡Œå¡å·(é¦–æ¬¡ä½¿ç”¨è¯·æŒ‰0æ³¨å†Œ):");
 			String account = scanner.nextLine();
 			if (account.equals("0")) {
-				System.out.println("ÇëÊäÈëĞÂµÄÕË»§£º");
+				System.out.println("è¯·è¾“å…¥æ–°çš„è´¦æˆ·ï¼š");
 				String carldld = scanner.nextLine();
-				System.out.println("ÇëÊäÈëÃÜÂë£º");
+				System.out.println("è¯·è¾“å…¥å¯†ç ï¼š");
 				String cardPwd = scanner.nextLine();
-				System.out.println("ÇëÊäÈëÓÃ»§ĞÕÃû£º");
+				System.out.println("è¯·è¾“å…¥ç”¨æˆ·å§“åï¼š");
 				String userName = scanner.nextLine();
-				System.out.println("ÇëÊäÈëÓÃ»§µç»°ºÅÂë£º");
+				System.out.println("è¯·è¾“å…¥ç”¨æˆ·ç”µè¯å·ç ï¼š");
 				String call = scanner.nextLine();
 				Bank.regist(carldld, cardPwd, userName, call);
 				continue;
 			}
-			System.out.println("ÇëÊäÈëÃÜÂë£º");
+			System.out.println("è¯·è¾“å…¥å¯†ç ï¼š");
 			String passwd = scanner.nextLine();
 			boolean result = Bank.logine(account, passwd);
 			if (result) {
-				System.out.println("µÇÂ¼³É¹¦£¬»¶Ó­" + BankTool.user[BankTool.index].getUserName() + "¹âÁÙ");
+				System.out.println("ç™»å½•æˆåŠŸï¼Œæ¬¢è¿" + BankTool.user[BankTool.index].getUserName() + "å…‰ä¸´");
 				operate();
 			} else {
-				System.out.println("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë¡£");
+				System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚");
 			}
 		}
 	}
@@ -37,20 +37,20 @@ public class bankSystem {
 	public static void operate() {
 		Scanner scanner1 = new Scanner(System.in);
 		while (true) {
-			System.out.println("ÇëÑ¡Ôñ·şÎñÏîÄ¿£º");
-			System.out.println("1.´æ¿î");
-			System.out.println("2.È¡¿î");
-			System.out.println("3.²éÑ¯");
-			System.out.println("4.ÍË³ö");
+			System.out.println("è¯·é€‰æ‹©æœåŠ¡é¡¹ç›®ï¼š");
+			System.out.println("1.å­˜æ¬¾");
+			System.out.println("2.å–æ¬¾");
+			System.out.println("3.æŸ¥è¯¢");
+			System.out.println("4.é€€å‡º");
 			int n = scanner1.nextInt();
 			switch (n) {
 			case 1:
-				System.out.println("ÇëÊäÈë´æ¿î½ğ¶î£º");
+				System.out.println("è¯·è¾“å…¥å­˜æ¬¾é‡‘é¢ï¼š");
 				double money = scanner1.nextDouble();
 				Bank.save(money);
 				break;
 			case 2:
-				System.out.println("ÇëÊäÈëÈ¡¿î½ğ¶î£º");
+				System.out.println("è¯·è¾“å…¥å–æ¬¾é‡‘é¢ï¼š");
 				double money1 = scanner1.nextDouble();
 				Bank.take(money1);
 				break;
@@ -61,7 +61,7 @@ public class bankSystem {
 				return;
 
 			default:
-				System.out.println("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë¡£");
+				System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚");
 				break;
 			}
 		}

@@ -1,11 +1,11 @@
 package bank;
 
 public class User {
-	String cardld; // ÒøĞĞ¿¨ºÅ
-	String cardPwd; // ÒøĞĞ¿¨ÃÜÂë
-	String userName; // ÕË»§Ãû
-	String call; // µç»°ºÅÂë
-	double account = 0; // ÕË»§Óà¶î
+	String cardld; // é“¶è¡Œå¡å·
+	String cardPwd; // é“¶è¡Œå¡å¯†ç 
+	String userName; // è´¦æˆ·å
+	String call; // ç”µè¯å·ç 
+	double account = 0; // è´¦æˆ·ä½™é¢
 
 	public User(String cardld, String cardPwd, String UserName, String call) {
 		this.cardld = cardld;

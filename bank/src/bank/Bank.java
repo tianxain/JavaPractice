@@ -6,7 +6,7 @@ public class Bank {
 		for (int i = 0; i < BankTool.user.length; i++) {
 			if (BankTool.user[i] == null) {
 				BankTool.user[i] = newUser;
-				System.out.println("注册成功");
+				System.out.println("娉ㄥ唽鎴愬姛");
 				break;
 			}
 		}
@@ -26,15 +26,15 @@ public class Bank {
 
 	public static void save(double money) {
 		BankTool.user[BankTool.index].setAccount(BankTool.user[BankTool.index].getAccount() + money);
-		System.out.println("存钱成功");
+		System.out.println("瀛橀挶鎴愬姛");
 	}
 
 	public static void take(double money) {
 		BankTool.user[BankTool.index].setAccount(BankTool.user[BankTool.index].getAccount() - money);
-		System.out.println("取钱成功");
+		System.out.println("鍙栭挶鎴愬姛");
 	}
 
 	public static void check() {
-		System.out.println("当前账户余额为：" + BankTool.user[BankTool.index].getAccount());
+		System.out.println("褰撳墠璐︽埛浣欓涓猴細" + BankTool.user[BankTool.index].getAccount());
 	}
 }
